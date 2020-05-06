@@ -15,6 +15,30 @@
         return $options = ['' => '- Select -'];
     }
 
+    function tesisOption($table, $columns)
+    {
+        $ci =& get_instance();
+        $query = $ci->db->select($columns)->from($table)->get();
+
+        if ($query->num_rows() >= 1) {
+            $options1 = ['' => '- Select -'];
+            if (count($columns) > 1) {
+                $colom = $columns[1].' - '.$columns[2];
+                
+              $option2= array_column($query->result(), $columns[0] , $columns[0]);
+            } else {
+                $option2= array_column($query->result(), $columns[1], $columns[0]);
+            }
+            
+            $options = $options1 + $option2;
+
+            return $query->result();
+        }
+        return $options = ['' => '- Select -'];
+    }
+
+
+
     function getCategories()
     {
         $ci =& get_instance();

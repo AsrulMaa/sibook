@@ -1,0 +1,13 @@
+Download terlebih dahulu aplikasi sibook
+1. Copy folder sibook ke folder www di laragon
+2. buka folder sibook, lalu buka folder DB, 
+3. buka browser lalu ktikan localhost/phpmyadmin
+4. buat database baru dan masukan nama dtabase sibook
+5. jika database berhasil di buat klik tombol import di atas 
+6. piih file yang ada pada folder sibook/DB/sibook.sql
+
+selanjutnya restar laragon
+klo muncul notif teken yes yes 
+klo udah buka browser ketik sibook.dev koga sibook.test
+jika tidak bisa ketik localhost/sibook
+

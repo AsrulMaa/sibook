@@ -307,7 +307,7 @@
             },
             function(isConfirm) {
                 if (isConfirm) {
-                    window.location.href = "<?= site_url('admin/menu_manajemen') ?>";
+                    window.location.href = "<?= site_url('admin/menus') ?>";
                 }
             });
 
@@ -324,7 +324,7 @@
         $('.loading').show();
 
         $.ajax({
-                url: '<?= base_url('admin/menu_manajemen/save_data') ?>',
+                url: '<?= base_url('admin/menus/save_data') ?>',
                 type: 'POST',
                 dataType: 'json',
                 data: data_post,
@@ -333,7 +333,7 @@
                 if (res.success) {
 
                     if (save_type == 'back') {
-                        window.location.href = BASE_URL + 'admin/menu_manajemen?act=save&res=success&id=' + res.id;
+                        window.location.href = BASE_URL + 'admin/menus?act=save&res=success&id=' + res.id;
                         return;
                     }
 

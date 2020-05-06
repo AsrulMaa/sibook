@@ -193,6 +193,17 @@ class Tesis extends Backend {
 
 		
 	}
+
+
+	public function ambil()
+	{
+		$data['title']	= 'Buku';
+		$data['page']	= 'tesis/form_ambil';
+
+		
+		$this->set($data);
+		$this->view($data);
+	}
 }
 
 /* End of file Buku.php */
